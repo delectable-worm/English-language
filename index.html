@@ -1,55 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A brief description of the webpage">
-    <meta name="author" content="Your Name">
-
-
     <title>Mahalinguistics</title>
-    <link rel="icon" type="image/x-icon" href="mahalingam.png">
-
-
-
-
-    <!-- Link to external stylesheets or include internal CSS -->
-    <link rel="stylesheet" href="styles.css">
-     <style>
-    body {
-      background-image: url('image (2).png');
-    }
-    </style> 
-
-
-
+    <link rel="icon" href="lingQuote.png">
+    <style>
+        body {
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            color: red;
+        }
+        header {
+            background-color: #333;
+            text-align: center;
+            padding: 1rem;
+        }
+        main {
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .post, .quote {
+            background-color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 2rem;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .post h2, .quote h3 {
+            color: #333;
+        }
+        .quote {
+            font-style: italic;
+            text-align: center;
+        }
+        footer {
+            background-color: #333;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-    <!-- Header -->
     <header>
         <h1>Mahalinguistics</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
     </header>
-
-    <!-- Main content area -->
     <main>
-        <section id="home">
-            <h2>Home</h2>
-            <p>Important quote:</p>
-            <img src="image (1).png" alt="Description of the image" width="300" height="200">
-        </section>
+        <section class="post">
+            <h2>Thing</h2>
+            <img src="chomQuote.png" alt="Description of the image" width="300" height="200">
 
-        <section id="about">
-            <h2>About</h2>
+            <p>This is the content of my first blog post. It can be about anything you'd like to share with your readers.</p>
+        </section>
+        <section class="quote">
+            <h3>Quote of the Day</h3>
             <p>That's my maha 
                 maha-lingam
                 
@@ -63,22 +74,11 @@
                 subpar-lingam,
                 
                 that's my maha 
-                maha-lingam.
-                </p>
-        </section>
-
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Contact information goes here.</p>
+                maha-lingam.</p>
         </section>
     </main>
-
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2024, Lingy.</p>
+        <p>&copy; 2024 My Blog and Quotes. All rights reserved.</p>
     </footer>
-
-    <!-- Link to external JavaScript or include internal scripts -->
-    <script src="scripts.js"></script>
 </body>
 </html>
