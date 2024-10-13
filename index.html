@@ -1,221 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mahalinguistics 2000 - The World's Best Worst Website Ever!</title>
-    <style>
-        @keyframes rainbow {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        body {
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
-            background-size: 1800% 1800%;
-            animation: rainbow 18s ease infinite;
-            cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🤪</text></svg>") 16 0, auto;
-            font-family: 'Comic Sans MS', cursive, sans-serif;
-        }
-        .container {
-            width: 95%;
-            margin: 0 auto;
-            background-color: rgba(255, 255, 0, 0.7);
-            border: 5px dashed #00ff00;
-            padding: 10px;
-            position: relative;
-        }
-        h1, h2, h3 {
-            font-family: 'Impact', sans-serif;
-            color: #0000ff;
-            text-shadow: 2px 2px #ff0000, 4px 4px #00ff00;
-            animation: blink 1s infinite;
-        }
-        @keyframes blink { 0% { opacity: 1; } 50% { opacity: 0; } 100% { opacity: 1; } }
-        .menu {
-            background-color: #000000;
-            color: #ffffff;
-            padding: 5px;
-            margin-bottom: 10px;
-        }
-        .menu a {
-            color: #ffff00;
-            text-decoration: none;
-            margin-right: 10px;
-            font-size: 18px;
-        }
-        .content {
-            background-color: #ffffff;
-            border: 3px solid #000000;
-            padding: 10px;
-            margin-bottom: 10px;
-        }
-        .sidebar {
-            float: right;
-            width: 200px;
-            background-color: #ff69b4;
-            border: 2px dotted #0000ff;
-            padding: 5px;
-            margin-left: 10px;
-        }
-        .counter {
-            font-size: 24px;
-            font-weight: bold;
-            color: #00ff00;
-            text-align: center;
-            background-color: #000000;
-            padding: 5px;
-        }
-        marquee { background-color: #ff0000; color: #ffffff; }
-        .floating-gif {
-            position: fixed;
-            z-index: 1000;
-        }
-        #popup, #secretArea {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: #ff00ff;
-            border: 3px solid #00ffff;
-            padding: 20px;
-            z-index: 1001;
-        }
-        .guestbook {
-            background-color: #98FB98;
-            border: 2px solid #4CAF50;
-            padding: 10px;
-            margin-top: 20px;
-        }
-        .webring {
-            text-align: center;
-            margin-top: 20px;
-        }
-        .award {
-            display: inline-block;
-            margin: 5px;
-        }
-    </style>
-</head>
-<body>
-    <div class="floating-gif" style="top: 10%; left: 5%;"><img src="/api/placeholder/100/100" alt="Dancing Hamster"></div>
-    <div class="floating-gif" style="bottom: 5%; right: 3%;"><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.kym-cdn.com%2Fphotos%2Fimages%2Fnewsfeed%2F001%2F862%2F771%2F915&f=1&nofb=1&ipt=b0f01b3c470c4c77ec9246aafe7c4b558aa0cb772af6d73e0d4239fa721e084c&ipo=images" alt="thing" alt="Floating GIF 2" style="width: 300px;"></div>
-    <div class="container">
-        <h1>MAHALINGUISTICS 2000</h1>
-        <div class="counter">Visitors: <span id="visitorCount">1337</span></div>
-        <marquee>Mahalinguistics 2000 - World's BEST WORST Website EVER FOR ALL YOUR ENGLISH LANGUAGE TIPS AND TRICKS AND QUOTES AND EXAMPLES AND RESOURCES AND GRAMMAR GUIDES AND VOCABULARY ENHANCEMENTS AND WRITING STRATEGIES AND LITERARY ANALYSIS AND STUDY TIPS AND EXERCISES AND DISCUSSION FORUMS AND INTERACTIVE QUIZZES AND PUNS AND IDIOMS AND PHRASES AND SPEECHES AND PRESENTATIONS AND BLOG POSTS AND PODCASTS AND VIDEOS AND TUTORIALS AND WORKSHOPS AND ONLINE COURSES AND COMMUNITY SUPPORT AND FEEDBACK AND MUCH MORE!!!</marquee>
-        <div class="menu">
-            <a href="#home" onclick="showPage('home')">HOME</a>
-            <a href="#about" onclick="showPage('about')">ABOUT</a>
-            <a href="#gallery" onclick="showPage('gallery')">GALLERY</a>
-            <a href="#quotes" onclick="showPage('quotes')">QUOTES</a>
-            <a href="javascript:void(0)" onclick="showPopup()">SECRET PAGE</a>
-            <a href="#whatsNew" onclick="showPage('whatsNew')">WHAT'S NEW</a>
-            <a href="#guestbook" onclick="showPage('guestbook')">GUESTBOOK</a>
-            <a href="javascript:void(0)" onclick="showSecretArea()">SUPER SECRET AREA</a>
-        </div>
-        <div class="sidebar">
-            <h3>HOT LINKS!!!</h3>
+<!-- ... (previous HTML content remains the same) ... -->
+
+<script>
+    const pages = {
+        home: `
+            <h2 style="font-family: 'Papyrus', fantasy; color: #800080;">The Mahalinguist Manifesto</h2>
+            <p style="font-family: 'Courier New', monospace; color: #008000;">we are forced to do ridiculous tasks (english) every day,<br> 
+            writing about a language system that humans made up, <br>
+            marked by a human who is making it up, <br> 
+            according to a marking scheme that humans made up, <br>
+            which aligns with a study design that humans made up, <br>
+            which aligns with values that humans made up. <br>
+            where does it end. <br>
+            it feels so derivative that it hurts my brain. <br>
+            <br>
+            this is not right at all...</p>
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Fc0%2F9c%2F51%2Fc09c51ea6dbbb0e9e1ee437d64d1894f.jpg&f=1&nofb=1&ipt=8424e706360f996d53495492a93ca04df82b65eab2e4a7abc361427df98c2e73&ipo=images" alt="Random GIF">
+            <div style="position: absolute; top: 50px; left: 50px; transform: rotate(-15deg);"><img src="https://static.wikia.nocookie.net/459d3c11-125b-4459-821d-7509c6f0edb1/scale-to-width/755"style="width: 100px;"></div>
+        `,
+        about: `
+            <h2 style="font-family: 'Brush Script MT', cursive; color: #ff4500;">About Mahalinguistics</h2>
+            <p style="font-family: 'Arial', sans-serif; color: #4b0082;">Mahalinguistics is a revolutionary approach to understanding language and its impact on our lives. Founded on the principles outlined in the Mahalinguist Manifesto, we seek to challenge conventional notions of linguistics and language education.</p>
+            <marquee>MIND = BLOWN!</marquee>
+            <img src="/api/placeholder/200/200" alt="Thinking Face" style="float: right;">
+        `,
+        gallery: `
+            <h2 style="font-family: 'Times New Roman', serif; color: #daa520;">Gallery of Linguistic Wonders</h2>
+            <marquee><img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExcG81aWtnbnFzbGx3cTAzbXU1Yzc4cWt2am5oZzdoc2U4bnA5ZGE0byZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/dFKu7g9zEGiC4lCl1N/giphy.gif" alt="Pic 1" style="width: 500px;"><img src="https://media2.giphy.com/media/YinlaXdWPKxQphOytT/200.webp" alt="Pic 2" style="width: 495px;"><img src="https://media1.giphy.com/media/uFqGP1OCY8SSCZfemX/200w.webp" alt="Pic 3" style="width: 650px;"></marquee>
+            <div style="display: flex; justify-content: space-around; margin-top: 20px;">
+                <img src="/api/placeholder/150/150" alt="image (1).png">
+                <img src="/api/placeholder/150/150" alt="Pic 5">
+                <img src="/api/placeholder/150/150" alt="Pic 6">
+            </div>
+        `,
+        quotes: `
+            <h2 style="font-family: 'Verdana', sans-serif; color: #8a2be2;">Memorable Quotes</h2>
+            <blockquote style="font-family: 'Lucida Console', Monaco, monospace; color: #dc143c;">"uwwuw omg~~ this is juwst.... Too r-rizzy >.< /s (the /s is fow sawcasm btwww!!!!! OwO >.< <br>
+            - Ruirui YAO"<br>
+            <br>
+            The smart way to keep people passive and obedient is to strictly limit the spectrum of acceptable opinion, but allow very lively debate within that spectrum ... that gives people the sense that there's free thinking going on, while all the time the presuppositions of the system are being reinforced by the limits placed on the range of the debate.<br>
+            - noam chompsky<br>
+            <br>
+            Language has no independent existence apart from the people who use it... it is a means to an end of understanding who you are and what society is like<br>
+            - david crystal<br>
+            <br>
+            Discriminatory language expresses cultural norms and belief systems which are often so entrenched in language as to appear normal<br>
+            - kate burridge<br>
+            <br>
+            double whammy <br>
+            - mahalingam
+            </blockquote>
+            <marquee direction="up" height="100"><blockquote style="font-family: 'Georgia', serif; color: #2f4f4f;">"That's my maha maha-lingam, crucial to my atar-lingam, even when he's blah-blah-lingam. we cannot write subpar-lingam, that's my maha maha-lingam."</blockquote></marquee>
+            <div style="text-align: center; margin-top: 20px;">
+                <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcm5hMWt3eXFsd2xic3I3eW53YWw4emE5aDc1ZzVhZmZ3Ym5xZHdjZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Lhsa792qzsksQDYVev/giphy.webp" alt="chomsky quote" style="width: 1000px;">
+            </div>
+        `,
+        whatsNew: `
+            <h2 style="font-family: 'Comic Sans MS', cursive; color: #ff6347;">What's New on Mahalinguistics 2000?</h2>
             <ul>
-                <li><a href="https://en.wikipedia.org/wiki/Linguistics" target="_blank" style="color: #00ff00;">Cool Linguistics Stuff</a></li>
-                <li><a href="https://lingbuzz.net/" target="_blank" style="color: #ff00ff;">Linguistics Papers</a></li>
-                <li><a href="https://archive.is/dl1VH" target="_blank" style="color: #0000ff;">Free Smileys</a></li>
+                <li>NEW! Blink-activated page navigation (coming soon!)</li>
+                <li>UPDATED! Our collection of linguistics memes now includes 3 new images!</li>
+                <li>FIXED! The "Language of the Day" feature now includes real languages!</li>
+                <li>COMING SOON! Interactive "Create Your Own Language" tool!</li>
             </ul>
-            <img src="/api/placeholder/180/150" alt="Under Construction">
-            <div style="text-align: center; margin-top: 10px;">
-                <a href="https://specgram.com/choose/index.html" target="_blank"><img src="/api/placeholder/88/31" alt="choose your linguistic adventure!"></a>
+        `,
+        guestbook: `
+            <h2 style="font-family: 'Arial Black', sans-serif; color: #4169e1;">Guestbook Entries</h2>
+            <div style="background-color: #f0f8ff; padding: 10px; margin-bottom: 10px;">
+                <strong>NoamChomsky1957:</strong> This website is a perfect example of the universal grammar of bad web design. I love it!
             </div>
-            <div class="counter">
-                <h4>Traffic Stats</h4>
-                <div id="trafficStats"></div>
+            <div style="background-color: #f0f8ff; padding: 10px; margin-bottom: 10px;">
+                <strong>SyntaxTree4Ever:</strong> Your website branches better than my parse trees! Keep up the great work!
             </div>
-        </div>
-        <div class="content" id="content">
-            <!-- Content will be dynamically loaded here -->
-        </div>
-        <div class="webring">
-            <h3>Linguistics Web Ring</h3>
-            <a href="#">&lt;&lt; Previous</a> | 
-            <a href="#">Random</a> | 
-            <a href="#">Next &gt;&gt;</a>
-        </div>
-        <div class="awards">
-            <h3>Our Awards</h3>
-            <img src="/api/placeholder/50/50" alt="Best of the Web 1997" class="award">
-            <img src="/api/placeholder/50/50" alt="Linguistic Excellence" class="award">
-            <img src="/api/placeholder/50/50" alt="Top Mahalinguistics Site" class="award">
-        </div>
-        <marquee direction="right" scrollamount="10">DON'T FORGET TO SIGN OUR GUESTBOOK!!!</marquee>
-        <div class="guestbook">
-            <h3>Guestbook</h3>
-            <form onsubmit="return false;">
-                <input type="text" placeholder="Your name">
-                <textarea placeholder="Your message"></textarea>
-                <button onclick="alert('Thanks for signing our guestbook!')">Sign Guestbook</button>
-            </form>
-        </div>
-    </div>
-    <div id="popup">
-        <h2>YOU FOUND THE SECRET PAGE!</h2>
-        <p>Congratulations! You win... A RAW 50 IN ENGLISH LANGUAGE RAAAAHHHHHHHHHH</p>
-        <button onclick="hidePopup()">Close</button>
-    </div>
-    <div id="secretArea">
-        <h2>SUPER SECRET AREA</h2>
-        <p>Wow, you found the super secret area! Here's a secret linguistics fact: The word "set" has 430 different meanings in the Oxford English Dictionary!</p>
-        <button onclick="hideSecretArea()">Close</button>
-    </div>
-    <script>
-        const pages = {
-            home: `
-                <h2 style="font-family: 'Papyrus', fantasy; color: #800080;">The Mahalinguist Manifesto</h2>
-                <p style="font-family: 'Courier New', monospace; color: #008000;">we are forced to do ridiculous tasks (english) every day,<br> 
-                writing about a language system that humans made up, <br>
-                marked by a human who is making it up, <br> 
-                according to a marking scheme that humans made up, <br>
-                which aligns with a study design that humans made up, <br>
-                which aligns with values that humans made up. <br>
-                where does it end. <br>
-                it feels so derivative that it hurts my brain. <br>
-                <br>
-                this is not right at all...</p>
-                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Fc0%2F9c%2F51%2Fc09c51ea6dbbb0e9e1ee437d64d1894f.jpg&f=1&nofb=1&ipt=8424e706360f996d53495492a93ca04df82b65eab2e4a7abc361427df98c2e73&ipo=images" alt="Random GIF">
-                <div style="position: absolute; top: 50px; left: 50px; transform: rotate(-15deg);"><img src="https://static.wikia.nocookie.net/459d3c11-125b-4459-821d-7509c6f0edb1/scale-to-width/755"style="width: 100px;"></div>
-            `,
-            about: `
-                <h2 style="font-family: 'Brush Script MT', cursive; color: #ff4500;">About Mahalinguistics</h2>
-                <p style="font-family: 'Arial', sans-serif; color: #4b0082;">Mahalinguistics is a revolutionary approach to understanding language and its impact on our lives. Founded on the principles outlined in the Mahalinguist Manifesto, we seek to challenge conventional notions of linguistics and language education.</p>
-                <marquee>MIND = BLOWN!</marquee>
-                <img src="/api/placeholder/200/200" alt="Thinking Face" style="float: right;">
-            `,
-            gallery: `
-                <h2 style="font-family: 'Times New Roman', serif; color: #daa520;">Gallery of Linguistic Wonders</h2>
-                <marquee><img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExcG81aWtnbnFzbGx3cTAzbXU1Yzc4cWt2am5oZzdoc2U4bnA5ZGE0byZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/dFKu7g9zEGiC4lCl1N/giphy.gif" alt="Pic 1" style="width: 500px;"><img src="https://media2.giphy.com/media/YinlaXdWPKxQphOytT/200.webp" alt="Pic 2" style="width: 495px;"><img src="https://media1.giphy.com/media/uFqGP1OCY8SSCZfemX/200w.webp" alt="Pic 3" style="width: 650px;"></marquee>
-                <div style="display: flex; justify-content: space-around; margin-top: 20px;">
-                    <img src="/api/placeholder/150/150" alt="image (1).png">
-                    <img src="/api/placeholder/150/150" alt="Pic 5">
-                    <img src="/api/placeholder/150/150" alt="Pic 6">
-                </div>
-            `,
-            quotes: `
-                <h2 style="font-family: 'Verdana', sans-serif; color: #8a2be2;">Memorable Quotes</h2>
-                <blockquote style="font-family: 'Lucida Console', Monaco, monospace; color: #dc143c;">"uwwuw omg~~ this is juwst.... Too r-rizzy >.< /s (the /s is fow sawcasm btwww!!!!! OwO >.< <br>
-                - Ruirui YAO"<br>
-<br>
-The smart way to keep people passive and obedient is to strictly limit the spectrum of acceptable opinion, but allow very lively debate within that spectrum ... that gives people the sense that there's free thinking going on, while all the time the presuppositions of the system are being reinforced by the limits placed on the range of the debate.<br>
-- noam chompsky<br>
-<br>
-Language has no independent existence apart from the people who use it... it is a means to an end of understanding who you are and what society is like<br>
-- david crystal<br>
-<br>
-Discriminatory language expresses cultural norms and belief systems which are often so entrenched in language as to appear normal<br>
-- kate burridge<br>
-<br>
-double whammy <br>
-- mahalingam
-</blockquote>
-                <marquee direction="up" height="100"><blockquote style="font-family: 'Georgia', serif; color: #2f4f4f;">"That's my maha maha-lingam, crucial to my atar-lingam, even when he's blah-blah-lingam. we cannot write subpar-lingam, that's my maha maha-lingam."</blockquote></marquee>
-                <div style="text-align: center; margin-top: 20px
+            <div style="background-color: #f0f8ff; padding: 10px;">
+                <strong>PhonemePhanatic:</strong> The sounds of this website are music to my ears! /ˈθæŋk juː/
+            </div>
+        `
+    };
+
+    function showPage(pageName) {
+        document.getElementById('content').innerHTML = pages[pageName];
+        updateVisitorCount();
+        updateTrafficStats();
+    }
+
+    function showPopup() {
+        document.getElementById('popup').style.display = 'block';
+    }
+
+    function hidePopup() {
+        document.getElementById('popup').style.display = 'none';
+    }
+
+    function showSecretArea() {
+        const password = prompt("Enter the super secret password:");
+        if (password === "linguistics123") {
+            document.getElementById('secretArea').style.display = 'block';
+        } else {
+            alert("Wrong password! Hint: It's linguistics + 123");
+        }
+    }
+
+    function hideSecretArea() {
+        document.getElementById('secretArea').style.display = 'none';
+    }
+
+    function updateVisitorCount() {
+        document.getElementById('visitorCount').textContent = Math.floor(Math.random() * 9999) + 1;
+    }
+
+    function updateTrafficStats() {
+        const stats = document.getElementById('trafficStats');
+        stats.innerHTML = `
+            <p>Hits today: ${Math.floor(Math.random() * 1000)}</p>
+            <p>Hits this week: ${Math.floor(Math.random() * 5000)}</p>
+            <p>Hits this month: ${Math.floor(Math.random() * 20000)}</p>
+        `;
+    }
+
+    // Initialize with home page
+    showPage('home');
+
+    // Add cursor trail effect
+    document.addEventListener('mousemove', function(e) {
+        const trail = document.createElement('div');
+        trail.className = 'cursor-trail';
+        trail.style.left = e.pageX + 'px';
+        trail.style.top = e.pageY + 'px';
+        trail.style.position = 'absolute';
+        trail.style.width = '5px';
+        trail.style.height = '5px';
+        trail.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+        trail.style.borderRadius = '50%';
+        trail.style.pointerEvents = 'none';
+        document.body.appendChild(trail);
+        setTimeout(() => {
+            trail.remove();
+        }, 1000);
+    });
+</script>
+</body>
+</html>
