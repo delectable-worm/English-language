@@ -1,7 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- ... (previous HTML content remains the same) ... -->
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahalinguistics 2000 - The World's Best Worst Website Ever!</title>
+    <style>
+        @keyframes rainbow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+            background-size: 1800% 1800%;
+            animation: rainbow 18s ease infinite;
+            cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🤪</text></svg>") 16 0, auto;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+        .container {
+            width: 95%;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 0, 0.7);
+            border: 5px dashed #00ff00;
+            padding: 10px;
+            position: relative;
+        }
+        h1, h2, h3 {
+            font-family: 'Impact', sans-serif;
+            color: #0000ff;
+            text-shadow: 2px 2px #ff0000, 4px 4px #00ff00;
+            animation: blink 1s infinite;
+        }
+        @keyframes blink { 0% { opacity: 1; } 50% { opacity: 0; } 100% { opacity: 1; } }
+        .menu {
+            background-color: #000000;
+            color: #ffffff;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        .menu a {
+            color: #ffff00;
+            text-decoration: none;
+            margin-right: 10px;
+            font-size: 18px;
+        }
+        .content {
+            background-color: #ffffff;
+            border: 3px solid #000000;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .sidebar {
+            float: right;
+            width: 200px;
+            background-color: #ff69b4;
+            border: 2px dotted #0000ff;
+            padding: 5px;
+            margin-left: 10px;
+        }
+        .counter {
+            font-size: 24px;
+            font-weight: bold;
+            color: #00ff00;
+            text-align: center;
+            background-color: #000000;
+            padding: 5px;
+        }
+        marquee { background-color: #ff0000; color: #ffffff; }
+        .floating-gif {
+            position: fixed;
+            z-index: 1000;
+        }
+        #popup, #secretArea {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #ff00ff;
+            border: 3px solid #00ffff;
+            padding: 20px;
+            z-index: 1001;
+        }
+        .guestbook {
+            background-color: #98FB98;
+            border: 2px solid #4CAF50;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        .webring {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .award {
+            display: inline-block;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-gif" style="top: 10%; left: 5%;"><img src="/api/placeholder/100/100" alt="Dancing Hamster"></div>
+    <div class="floating-gif" style="bottom: 5%; right: 3%;"><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.kym-cdn.com%2Fphotos%2Fimages%2Fnewsfeed%2F001%2F862%2F771%2F915&f=1&nofb=1&ipt=b0f01b3c470c4c77ec9246aafe7c4b558aa0cb772af6d73e0d4239fa721e084c&ipo=images" alt="thing" alt="Floating GIF 2" style="width: 300px;"></div>
+    <div class="container">
+        <h1>MAHALINGUISTICS 2000</h1>
+        <div class="counter">Visitors: <span id="visitorCount">1337</span></div>
+        <marquee>Mahalinguistics 2000 - World's BEST WORST Website EVER FOR ALL YOUR ENGLISH LANGUAGE TIPS AND TRICKS AND QUOTES AND EXAMPLES AND RESOURCES AND GRAMMAR GUIDES AND VOCABULARY ENHANCEMENTS AND WRITING STRATEGIES AND LITERARY ANALYSIS AND STUDY TIPS AND EXERCISES AND DISCUSSION FORUMS AND INTERACTIVE QUIZZES AND PUNS AND IDIOMS AND PHRASES AND SPEECHES AND PRESENTATIONS AND BLOG POSTS AND PODCASTS AND VIDEOS AND TUTORIALS AND WORKSHOPS AND ONLINE COURSES AND COMMUNITY SUPPORT AND FEEDBACK AND MUCH MORE!!!</marquee>
+        <div class="menu">
+            <a href="#home" onclick="showPage('home')">HOME</a>
+            <a href="#about" onclick="showPage('about')">ABOUT</a>
+            <a href="#gallery" onclick="showPage('gallery')">GALLERY</a>
+            <a href="#quotes" onclick="showPage('quotes')">QUOTES</a>
+            <a href="javascript:void(0)" onclick="showPopup()">SECRET PAGE</a>
+            <a href="#whatsNew" onclick="showPage('whatsNew')">WHAT'S NEW</a>
+            <a href="#guestbook" onclick="showPage('guestbook')">GUESTBOOK</a>
+            <a href="javascript:void(0)" onclick="showSecretArea()">SUPER SECRET AREA</a>
+        </div>
+        <div class="sidebar">
+            <h3>HOT LINKS!!!</h3>
+            <ul>
+                <li><a href="https://en.wikipedia.org/wiki/Linguistics" target="_blank" style="color: #00ff00;">Cool Linguistics Stuff</a></li>
+                <li><a href="https://lingbuzz.net/" target="_blank" style="color: #ff00ff;">Linguistics Papers</a></li>
+                <li><a href="https://archive.is/dl1VH" target="_blank" style="color: #0000ff;">Free Smileys</a></li>
+            </ul>
+            <img src="/api/placeholder/180/150" alt="Under Construction">
+            <div style="text-align: center; margin-top: 10px;">
+                <a href="https://specgram.com/choose/index.html" target="_blank"><img src="/api/placeholder/88/31" alt="choose your linguistic adventure!"></a>
+            </div>
+            <div class="counter">
+                <h4>Traffic Stats</h4>
+                <div id="trafficStats"></div>
+            </div>
+        </div>
+        <div class="content" id="content">
+            <!-- Content will be dynamically loaded here -->
+        </div>
+        <div class="webring">
+            <h3>Linguistics Web Ring</h3>
+            <a href="#">&lt;&lt; Previous</a> | 
+            <a href="#">Random</a> | 
+            <a href="#">Next &gt;&gt;</a>
+        </div>
+        <div class="awards">
+            <h3>Our Awards</h3>
+            <img src="/api/placeholder/50/50" alt="Best of the Web 1997" class="award">
+            <img src="/api/placeholder/50/50" alt="Linguistic Excellence" class="award">
+            <img src="/api/placeholder/50/50" alt="Top Mahalinguistics Site" class="award">
+        </div>
+        <marquee direction="right" scrollamount="10">DON'T FORGET TO SIGN OUR GUESTBOOK!!!</marquee>
+        <div class="guestbook">
+            <h3>Guestbook</h3>
+            <form onsubmit="return false;">
+                <input type="text" placeholder="Your name">
+                <textarea placeholder="Your message"></textarea>
+                <button onclick="alert('Thanks for signing our guestbook!')">Sign Guestbook</button>
+            </form>
+        </div>
+    </div>
+    <div id="popup">
+        <h2>YOU FOUND THE SECRET PAGE!</h2>
+        <p>Congratulations! You win... A RAW 50 IN ENGLISH LANGUAGE RAAAAHHHHHHHHHH</p>
+        <button onclick="hidePopup()">Close</button>
+    </div>
+    <div id="secretArea">
+        <h2>SUPER SECRET AREA</h2>
+        <p>Wow, you found the super secret area! Here's a secret linguistics fact: The word "set" has 430 different meanings in the Oxford English Dictionary!</p>
+        <button onclick="hideSecretArea()">Close</button>
+    </div>
 <script>
     const pages = {
         home: `
