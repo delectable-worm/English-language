@@ -98,6 +98,35 @@
             display: inline-block;
             margin: 5px;
         }
+        .secret-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1px;
+            color: transparent;
+        }
+        #wordOfTheDay {
+            background-color: #FFD700;
+            border: 2px solid #FFA500;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        .interactive-button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            transition-duration: 0.4s;
+        }
+        .interactive-button:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
@@ -116,6 +145,7 @@
             <a href="#whatsNew" onclick="showPage('whatsNew')">METALANGUAGE</a>
             <a href="#guestbook" onclick="showPage('guestbook')">GUESTBOOK</a>
             <a href="javascript:void(0)" onclick="showSecretArea()">SUPER SECRET AREA</a>
+            <a href="#wordOfTheDay" onclick="showPage('wordOfTheDay')">WORD OF THE DAY</a>
         </div>
         <div class="sidebar">
             <h3>HOT LINKS!!!</h3>
@@ -157,6 +187,7 @@
                 <button onclick="alert('Thanks for signing our guestbook! (please msg eric.w or ruirui.y if you want it displayed on the guestbook page)')">Sign Guestbook</button>
             </form>
         </div>
+        <button class="secret-button" onclick="showEasterEgg()">.</button>
     </div>
     <div id="popup">
         <h2>YOU FOUND THE SECRET PAGE!</h2>
@@ -167,6 +198,12 @@
         <h2>SUPER SECRET AREA</h2>
         <p>Wow, you found the super secret area! You have earnt praise from mahalingam. <br>"I am proud of you" <br> - Mr Mahalingam</p>
         <button onclick="hideSecretArea()">Close</button>
+    </div>
+    <div id="easterEgg" style="display:none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #ff00ff; padding: 20px; border: 3px solid #00ffff; z-index: 1002;">
+        <h2>🎉 You found the Easter Egg! 🎉</h2>
+        <p>Here's a linguistics joke for you:</p>
+        <p>Why can't a bicycle stand on its own? It's two tired!</p>
+        <button onclick="document.getElementById('easterEgg').style.display='none'">Close</button>
     </div>
 <script>
     const pages = {
@@ -184,136 +221,9 @@
             this is not right at all...</p>
             <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Fc0%2F9c%2F51%2Fc09c51ea6dbbb0e9e1ee437d64d1894f.jpg&f=1&nofb=1&ipt=8424e706360f996d53495492a93ca04df82b65eab2e4a7abc361427df98c2e73&ipo=images" alt="Random GIF">
             <div style="position: absolute; top: 50px; left: 50px; transform: rotate(-15deg);"><img src="https://static.wikia.nocookie.net/459d3c11-125b-4459-821d-7509c6f0edb1/scale-to-width/755"style="width: 100px;"></div>
+            <button class="interactive-button" onclick="alert('You clicked the button! Here\'s a fun fact: The word "alphabet" comes from the first two letters of the Greek alphabet: alpha and beta.')">Click for a Fun Fact!</button>
         `,
         about: `
             <h2 style="font-family: 'Brush Script MT', cursive; color: #ff4500;">About Mahalinguistics</h2>
             <p style="font-family: 'Arial', sans-serif; color: #4b0082;">Mahalinguistics is a revolutionary approach to understanding language and its impact on our lives. Founded on the principles outlined in the Mahalinguist Manifesto, we seek to challenge conventional notions of linguistics and language education.</p>
-            <marquee>MIND = BLOWN!</marquee>
-            <img src="/api/placeholder/200/200" alt="Thinking Face" style="float: right;">
-        `,
-        gallery: `
-            <h2 style="font-family: 'Times New Roman', serif; color: #daa520;">Gallery of Linguistic Wonders</h2>
-           
-             <ul>
-                <li>👇👇👇 SCROLL DOWN 👇👇👇</li>
-            </ul>
-            
-           <marquee direction="left" scrollamount="50"><img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExcG81aWtnbnFzbGx3cTAzbXU1Yzc4cWt2am5oZzdoc2U4bnA5ZGE0byZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/dFKu7g9zEGiC4lCl1N/giphy.gif" alt="Pic 1" style="width: 500px;"><img src="https://media2.giphy.com/media/YinlaXdWPKxQphOytT/200.webp" alt="Pic 2" style="width: 495px;"><img src="https://media1.giphy.com/media/uFqGP1OCY8SSCZfemX/200w.webp" alt="Pic 3" style="width: 650px;"></marquee>
-            <div style="display: flex; justify-content: space-around; margin-top: 20px;">
-                <img src="https://preview.redd.it/ky15o1oggrq41.jpg?width=1080&crop=smart&auto=webp&s=93a06f14c028c0e3e10a54452240ad3101bdcf34" alt="image (1).png" style="height: 200px;">
-                <img src="image (1).png" alt="Pic 5" style="height: 200px;">
-                <img src="image (2).png" alt="Pic 6" style="height: 200px;">
-            </div>
-        `,
-        quotes: `
-            <h2 style="font-family: 'Verdana', sans-serif; color: #8a2be2;">Memorable Quotes</h2>
-            <blockquote style="font-family: 'Lucida Console', Monaco, monospace; color: #dc143c;">"uwwuw omg~~ this is juwst.... Too r-rizzy >.< /s (the /s is fow sawcasm btwww!!!!! OwO >.< <br>
-            - Ruirui YAO"<br>
-            <br>
-            The smart way to keep people passive and obedient is to strictly limit the spectrum of acceptable opinion, but allow very lively debate within that spectrum ... that gives people the sense that there's free thinking going on, while all the time the presuppositions of the system are being reinforced by the limits placed on the range of the debate.<br>
-            - noam chompsky<br>
-            <br>
-            Language has no independent existence apart from the people who use it... it is a means to an end of understanding who you are and what society is like<br>
-            - david crystal<br>
-            <br>
-            Discriminatory language expresses cultural norms and belief systems which are often so entrenched in language as to appear normal<br>
-            - kate burridge<br>
-            <br>
-            double whammy <br>
-            - mahalingam
-            </blockquote>
-            <marquee direction="up" height="100"><blockquote style="font-family: 'Georgia', serif; color: #2f4f4f;">"That's my maha maha-lingam, crucial to my atar-lingam, even when he's blah-blah-lingam. we cannot write subpar-lingam, that's my maha maha-lingam."</blockquote></marquee>
-            <div style="text-align: center; margin-top: 20px;">
-                <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcm5hMWt3eXFsd2xic3I3eW53YWw4emE5aDc1ZzVhZmZ3Ym5xZHdjZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Lhsa792qzsksQDYVev/giphy.webp" alt="chomsky quote" style="width: 1000px;">
-            </div>
-        `,
-        whatsNew: `
-            <h2 style="font-family: 'Comic Sans MS', cursive; color: #ff6347;">NEW METALANGUAGE JUST DROPPED!!! CHECK IT OUT</h2>
-            <ul>
-                <li>Scrolltalk: The phenomenon of carrying on a conversation while simultaneously scrolling through a phone or other device, impacting the depth of engagement.</li>
-                <li>Infobinge: The compulsive consumption of large amounts of information or content in one sitting, often driven by a fear of missing out on important updates.</li>
-                <li>Intextion: The tension between a text's literal meaning and the emotional undertone inferred by the recipient (e.g., in short or curt messages).</li>
-                <li>Linkleap: The tendency to jump rapidly from one link to another in an unplanned sequence, often leading to excessive content consumption without a clear purpose.</li>       
-                <li>Clickdrift: When a speaker or listener momentarily disengages from a conversation to respond to a notification or check something on their device.</li>
-                <li>Mediaweave: The skillful blending of text, images, and video to create a coherent message in digital communication.</li>
-                <li>Typopace: The speed and rhythm of typing during real-time messaging, impacting the flow of conversation.</li>
-                <li>COMING SOON! -> metalanguage to describe language in the AI sphere!</li>
-            </ul>
-        `,
-        guestbook: `
-            <h2 style="font-family: 'Arial Black', sans-serif; color: #4169e1;">Guestbook Entries</h2>
-            <div style="background-color: #f0f8ff; padding: 10px; margin-bottom: 10px;">
-                <strong>elinaaa:</strong> meow
-            </div>
-            <div style="background-color: #f0f8ff; padding: 10px; margin-bottom: 10px;">
-                <strong>VCAA:</strong> This rivals the VCE study design :O
-            </div>
-            <div style="background-color: #f0f8ff; padding: 10px;">
-                <strong>Noam Chomsky:</strong> this website is goated
-            </div>
-        `
-    };
-
-    function showPage(pageName) {
-        document.getElementById('content').innerHTML = pages[pageName];
-        updateVisitorCount();
-        updateTrafficStats();
-    }
-
-    function showPopup() {
-        document.getElementById('popup').style.display = 'block';
-    }
-
-    function hidePopup() {
-        document.getElementById('popup').style.display = 'none';
-    }
-
-    function showSecretArea() {
-        const password = prompt("Enter the super secret password:");
-        if (password === "mahalingam") {
-            document.getElementById('secretArea').style.display = 'block';
-        } else {
-            alert("Wrong password! Hint: who is the goat lang teacher");
-        }
-    }
-
-    function hideSecretArea() {
-        document.getElementById('secretArea').style.display = 'none';
-    }
-
-    function updateVisitorCount() {
-        document.getElementById('visitorCount').textContent = Math.floor(Math.random() * 9999) + 1;
-    }
-
-    function updateTrafficStats() {
-        const stats = document.getElementById('trafficStats');
-        stats.innerHTML = `
-            <p>Hits today: ${Math.floor(Math.random() * 1000)}</p>
-            <p>Hits this week: ${Math.floor(Math.random() * 5000)}</p>
-            <p>Hits this month: ${Math.floor(Math.random() * 20000)}</p>
-        `;
-    }
-
-    // Initialize with home page
-    showPage('home');
-
-    // Add cursor trail effect
-    document.addEventListener('mousemove', function(e) {
-        const trail = document.createElement('div');
-        trail.className = 'cursor-trail';
-        trail.style.left = e.pageX + 'px';
-        trail.style.top = e.pageY + 'px';
-        trail.style.position = 'absolute';
-        trail.style.width = '5px';
-        trail.style.height = '5px';
-        trail.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
-        trail.style.borderRadius = '50%';
-        trail.style.pointerEvents = 'none';
-        document.body.appendChild(trail);
-        setTimeout(() => {
-            trail.remove();
-        }, 1000);
-    });
-</script>
-</body>
-</html>
+            <marquee>MIND =
