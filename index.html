@@ -98,6 +98,35 @@
             display: inline-block;
             margin: 5px;
         }
+        .secret-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1px;
+            color: transparent;
+        }
+        #wordOfTheDay {
+            background-color: #FFD700;
+            border: 2px solid #FFA500;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        .interactive-button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            transition-duration: 0.4s;
+        }
+        .interactive-button:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
@@ -116,6 +145,7 @@
             <a href="#whatsNew" onclick="showPage('whatsNew')">METALANGUAGE</a>
             <a href="#guestbook" onclick="showPage('guestbook')">GUESTBOOK</a>
             <a href="javascript:void(0)" onclick="showSecretArea()">SUPER SECRET AREA</a>
+            <a href="#wordOfTheDay" onclick="showPage('wordOfTheDay')">WORD OF THE DAY</a>
         </div>
         <div class="sidebar">
             <h3>HOT LINKS!!!</h3>
@@ -157,6 +187,7 @@
                 <button onclick="alert('Thanks for signing our guestbook! (please msg eric.w or ruirui.y if you want it displayed on the guestbook page)')">Sign Guestbook</button>
             </form>
         </div>
+        <button class="secret-button" onclick="showEasterEgg()">.</button>
     </div>
     <div id="popup">
         <h2>YOU FOUND THE SECRET PAGE!</h2>
@@ -167,6 +198,12 @@
         <h2>SUPER SECRET AREA</h2>
         <p>Wow, you found the super secret area! You have earnt praise from mahalingam. <br>"I am proud of you" <br> - Mr Mahalingam</p>
         <button onclick="hideSecretArea()">Close</button>
+    </div>
+    <div id="easterEgg" style="display:none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #ff00ff; padding: 20px; border: 3px solid #00ffff; z-index: 1002;">
+        <h2>🎉 You found the Easter Egg! 🎉</h2>
+        <p>Here's a linguistics joke for you:</p>
+        <p>Why can't a bicycle stand on its own? It's two tired!</p>
+        <button onclick="document.getElementById('easterEgg').style.display='none'">Close</button>
     </div>
 <script>
     const pages = {
