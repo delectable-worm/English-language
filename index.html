@@ -343,14 +343,50 @@
         document.getElementById('easterEgg').style.display = 'block';
     }
 
-    function generateWordOfTheDay() {
-        const words = [
-            { word: "Serendipity", definition: "The occurrence and development of events by chance in a happy or beneficial way.", example: "By serendipity, she stumbled upon the perfect research topic for her linguistics paper." },
-            { word: "Ephemeral", definition: "Lasting for a very short time.", example: "The ephemeral nature of spoken language makes it challenging to study without proper recording techniques." },
-            { word: "Ubiquitous", definition: "Present, appearing, or found everywhere.", example: "In the digital age, emoji have become ubiquitous in online communication." },
-            { word: "Cacophony", definition: "A harsh, discordant mixture of sounds.", example: "The cacophony of different languages at the international conference was both challenging and exciting for the linguists." },
-            { word: "Paradigm", definition: "A typical example or pattern of something; a model.", example: "Chomsky's theory of universal grammar represented a new paradigm in linguistic thought." }
-        ];
+
+function generateWordOfTheDay() {
+    const words = [
+        { word: "Ambrosia", definition: "The food of the gods in Greek mythology, said to bring immortality.", example: "The meal was so delicious, it felt like we were dining on ambrosia." },
+        { word: "Anagnorisis", definition: "A moment of sudden realization or revelation, especially in a tragedy.", example: "In the play, the hero's anagnorisis came too late to prevent the disaster." },
+        { word: "Asemic writing", definition: "A form of writing that has no specific semantic content.", example: "The artist's asemic writing left interpretation entirely to the viewer's imagination." },
+        { word: "Ataraxia", definition: "A state of serene calmness, especially free from anxiety.", example: "After years of meditation, she finally reached ataraxia." },
+        { word: "Buridan's bridge", definition: "A logical paradox named after the philosopher Buridan, dealing with self-reference.", example: "The philosopher's dilemma was as perplexing as Buridan's bridge." },
+        { word: "Carcinization", definition: "The evolutionary tendency for crustaceans to evolve into crab-like forms.", example: "Carcinization is a fascinating example of convergent evolution in nature." },
+        { word: "Catch-22", definition: "A paradoxical situation from which one cannot escape because of contradictory rules.", example: "He was stuck in a Catch-22: to get the job, he needed experience, but to get experience, he needed the job." },
+        { word: "Deo volente", definition: "Latin for 'God willing'; used to express hope or desire for the future.", example: "We will meet again soon, deo volente." },
+        { word: "Dolorem ipsum", definition: "Latin placeholder text often used in typesetting and design.", example: "The designer used dolorem ipsum in the mock-up to demonstrate the page layout." },
+        { word: "Dysnomia", definition: "A condition where one has difficulty recalling words or names.", example: "His dysnomia made conversations challenging as he struggled to find the right words." },
+        { word: "Eppur si muove", definition: "Italian for 'And yet it moves'; attributed to Galileo after his forced recantation.", example: "Despite their doubts, eppur si muove, the evidence speaks for itself." },
+        { word: "Ersatz", definition: "Made as a substitute, typically an inferior one.", example: "The ersatz coffee tasted nothing like the real thing." },
+        { word: "Etaoin shrdlu", definition: "A nonsense phrase that appeared in error during typesetting in older printing presses.", example: "The typesetter accidentally left etaoin shrdlu in the final copy." },
+        { word: "Gordian Knot", definition: "A complex or unsolvable problem.", example: "The company’s financial woes became a Gordian Knot, impossible to untangle without drastic measures." },
+        { word: "Hamburgefons", definition: "A nonsense word used in typesetting for testing fonts.", example: "The graphic designer used Hamburgefons to visualize how the font would appear in print." },
+        { word: "Hapax legomenon", definition: "A word that occurs only once in a text or a language.", example: "The rare word in the manuscript was a hapax legomenon, with no known occurrences elsewhere." },
+        { word: "Hobson's choice", definition: "A situation where one must choose between taking what is offered or nothing at all.", example: "Faced with a Hobson’s choice, she reluctantly agreed to the deal." },
+        { word: "Holus bolus", definition: "All at once; entirely.", example: "The crowd rushed into the stadium holus bolus, eager for the game to begin." },
+        { word: "Honorificabilitudinitatibus", definition: "The state of being able to achieve honors.", example: "Shakespeare's use of honorificabilitudinitatibus in 'Love's Labour's Lost' is famously complex." },
+        { word: "Ikigai", definition: "A Japanese concept meaning 'a reason for being' or finding purpose in life.", example: "After much reflection, she found her ikigai in teaching others." },
+        { word: "Ipso facto", definition: "By the very fact or act itself.", example: "If he fails to submit the report on time, ipso facto, he will lose the opportunity for a promotion." },
+        { word: "Kintsugi", definition: "The Japanese art of repairing broken pottery with gold or silver, embracing flaws and imperfections.", example: "The bowl was repaired using kintsugi, making its cracks part of its beauty." },
+        { word: "Locus amoenus", definition: "A literary term for an idealized, peaceful place.", example: "The garden in the story was a locus amoenus, symbolizing a perfect escape from reality." },
+        { word: "Maróczy Bind", definition: "A strategic formation in chess, involving pawns that restrict the opponent’s movement.", example: "He set up a Maróczy Bind, limiting his opponent’s options on the board." },
+        { word: "Metanoia", definition: "A transformative change of heart, especially a spiritual conversion.", example: "Her experience abroad brought about a profound metanoia, changing her outlook on life." },
+        { word: "Nomological Dangers", definition: "Risks associated with relying too heavily on laws or rules, especially in philosophy.", example: "The philosopher warned of the nomological dangers in applying strict determinism to human behavior." },
+        { word: "Palindromes", definition: "Words or phrases that read the same backward as forward.", example: "'Madam' and 'racecar' are examples of palindromes." },
+        { word: "Phosphene", definition: "The phenomenon of seeing light without light entering the eye, usually through pressure or motion.", example: "Rubbing his eyes, he saw bright phosphenes dancing before him." },
+        { word: "Prêt à Manger", definition: "French for 'ready to eat', commonly used in restaurant names.", example: "We stopped at Prêt à Manger for a quick lunch on the go." },
+        { word: "Pyrrhic victory", definition: "A victory won at such great cost that it is nearly tantamount to defeat.", example: "His promotion was a Pyrrhic victory, as it came at the expense of his personal life." },
+        { word: "Razzmatazz", definition: "Elaborate or showy activity or display designed to attract attention.", example: "The show was full of razzmatazz, but lacked real substance." },
+        { word: "Rubicon", definition: "To cross the Rubicon means to make a decision that is irrevocable.", example: "By signing the contract, they crossed the Rubicon; there was no turning back." },
+        { word: "Self-licking ice cream cone", definition: "A self-perpetuating system that exists only to sustain itself.", example: "The bureaucracy had become a self-licking ice cream cone, more concerned with process than outcomes." },
+        { word: "Skeuomorph", definition: "A design feature that is no longer functional but retained for aesthetic reasons.", example: "The leather texture on the phone case was a skeuomorph, mimicking the look of older devices." },
+        { word: "Sorites sequence", definition: "A paradox involving a heap, where removing grains one by one leads to questioning when it stops being a heap.", example: "The debate over government spending felt like a Sorites sequence, with each cut seemingly insignificant until the whole system was affected." },
+        { word: "Succor", definition: "Assistance and support in times of hardship.", example: "The charity provided succor to the victims of the flood." },
+        { word: "Sycophant", definition: "A person who acts obsequiously toward someone important to gain advantage.", example: "The sycophant lavished praise on his boss in hopes of getting a promotion." },
+        { word: "Taito (kanji)", definition: "A rare and complex kanji character used in Japanese, one of the few with 84 strokes.", example: "The Taito kanji is so intricate that few people know how to write it." },
+        { word: "Tit for tat", definition: "An equivalent retaliation.", example: "Their feud escalated into a tit for tat exchange of insults." },
+        { word: "Zugzwang", definition: "A situation in chess where any move made will worsen the player's position.", example: "He found himself in zugzwang, knowing that any move he made would lead to defeat." }
+    ];
         const randomWord = words[Math.floor(Math.random() * words.length)];
         document.getElementById('wordTitle').textContent = randomWord.word;
         document.getElementById('wordDefinition').textContent = `Definition: ${randomWord.definition}`;
